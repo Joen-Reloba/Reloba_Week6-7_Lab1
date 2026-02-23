@@ -1,0 +1,331 @@
+/* ─── pageStyle.css ─── */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --border: #e4e4e0;
+  --border-strong: #c8c8c2;
+  --text: #1a1a18;
+  --text-muted: #6b6b65;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body > nav {
+  width: 100%;
+  align-self: stretch;
+}
+
+body > *:not(nav):not(script) {
+  width: 100%;
+  max-width: 900px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+body > h1,
+body > h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+body > p {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+body > table {
+  margin-top: 0.5rem;
+}
+
+body > form {
+  margin-top: 1rem;
+  max-width: 520px;
+}
+
+/* ── Page header ── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.page-header h2,
+h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Add Client link ── */
+p a[href*="client_add"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+p a[href*="client_add"]:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Table ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  font-size: 0.875rem;
+}
+
+table th {
+  background: var(--bg);
+  padding: 0.65rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover td {
+  background: #fafaf8;
+}
+
+table td:first-child {
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+table td a {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+table td a:hover {
+  border-color: var(--accent);
+  background: #eff6ff;
+}
+
+/* ── Form card ── */
+form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  max-width: 520px;
+}
+
+form label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+  outline: none;
+  margin-bottom: 1.1rem;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: var(--surface);
+}
+
+/* ── Buttons ── */
+form button[type="submit"],
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.55rem 1.25rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    transform 0.1s;
+}
+
+form button[type="submit"]:hover,
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+form button[type="submit"]:active,
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ── Error message ── */
+p[style*="color:red"] {
+  font-size: 0.8125rem;
+  color: var(--danger) !important;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Dashboard cards ── */
+.infos .card {
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  background: var(--surface) !important;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.infos .card:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px);
+}
+
+.infos .card-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.infos .card-text {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+}
+
+/* ── Dashboard action buttons ── */
+.actions .btn {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: none;
+  transition:
+    background 0.15s,
+    transform 0.1s;
+}
+
+.actions .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ── Dashboard h1 ── */
+h1.fw-bold {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em;
+  padding: 1.5rem 1.5rem 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .page-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  form {
+    padding: 1.25rem;
+  }
+  table th,
+  table td {
+    padding: 0.6rem 0.65rem;
+  }
+}

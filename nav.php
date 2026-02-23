@@ -19,7 +19,7 @@
           <a id="dashboardLink" class="nav-link active" aria-current="page" href="/index.php">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a id="clientsLink" class="nav-link" href="/index.php">Clients</a>
+          <a id="clientLink" class="nav-link"  href="/pages/client_list.php">Clients</a>
         </li>
         <li class="nav-item">
           <a id="bookingsLink" class="nav-link" href="/index.php">Bookings</a>
