@@ -1,25 +1,138 @@
+:root {
+  --primary: #800000;
+  --primary-dark: #5c0000;
+  --soft-bg: #fff4f4;
+  --card-bg: #ffffff;
+}
+
+body {
+  background: linear-gradient(to right, #fff4f4, #ffffff);
+}
+
+.infos h1 {
+  width: 100%;
+  text-align: center;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.infos {
+  padding: 40px 0;
+}
+
 .card {
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  border: none !important;
+  border-radius: 15px !important;
+  background: var(--card-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 5px solid var(--primary) !important;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(128, 0, 0, 0.15);
 }
 
-button {
-  background-color: #007bff;
-  color: white;
+.card-title {
+  color: #666;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.card-text {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.actions {
+  margin-top: 50px;
+  padding-bottom: 40px;
+}
+
+.actions .btn {
+  background-color: var(--primary) !important;
+  border: none !important;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.actions .btn:hover {
+  background-color: var(--primary-dark) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(128, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90% !important;
+    margin: auto;
+  }
+}
+
+/* =========================
+   MAROON NAVBAR THEME
+========================= */
+
+.navbar {
+  background: linear-gradient(to right, #800000, #5c0000) !important;
+  padding: 12px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand */
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Nav Links */
+.navbar .nav-link {
+  color: #f8dede !important;
+  font-weight: 500;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Animated underline effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link highlight */
+.navbar .nav-link.active {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+/* Toggler button (mobile) */
+.navbar-toggler {
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-  transition: background-color 0.3s;
+.navbar-toggler:focus {
+  box-shadow: none;
 }

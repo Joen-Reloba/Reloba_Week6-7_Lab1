@@ -28,9 +28,10 @@ $revenue = $revRow['s'];
     <?php
     include "nav.php";
     ?>
-   <h1 class="fw-bold text-black">Dashboard</h1>
+   <!-- <h1 class="fw-bold text-black">Dashboard</h1> -->
 
 <div class="infos mt-5 d-flex justify-content-center gap-4 flex-wrap">
+  <h1 class="fw-bold text-black">Dashboard</h1>
   
   <div class="card text-center" style="width: 12rem;">
     <div class="card-body">

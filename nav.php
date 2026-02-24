@@ -25,7 +25,7 @@
           <a id="bookingsLink" class="nav-link" href="/index.php">Bookings</a>
         </li>
         <li class="nav-item">
-          <a id="servicesLink" class="nav-link" href="/index.php">Services</a>
+          <a id="servicesLink" class="nav-link" href="/pages/services_list.php">Services</a>
         </li>
         <li class="nav-item">
           <a id="toolsLink" class="nav-link" href="/index.php">Tools</a>
