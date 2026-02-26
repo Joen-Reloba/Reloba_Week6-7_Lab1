@@ -28,7 +28,10 @@
           <a id="servicesLink" class="nav-link" href="/pages/services_list.php">Services</a>
         </li>
         <li class="nav-item">
-          <a id="toolsLink" class="nav-link" href="/index.php">Tools</a>
+          <a id="toolsLink" class="nav-link" href="/pages/tools_list_assign.php">Tools</a>
+        </li>
+        <li class="nav-item">
+          <a id="paymentsLink" class="nav-link" href="/pages/payments_list.php">Payments</a>
         </li>
       </ul>
     </div>
