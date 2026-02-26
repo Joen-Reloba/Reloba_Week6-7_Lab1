@@ -22,7 +22,7 @@
           <a id="clientLink" class="nav-link"  href="/pages/client_list.php">Clients</a>
         </li>
         <li class="nav-item">
-          <a id="bookingsLink" class="nav-link" href="/index.php">Bookings</a>
+          <a id="bookingsLink" class="nav-link" href="/pages/bookings_list.php">Bookings</a>
         </li>
         <li class="nav-item">
           <a id="servicesLink" class="nav-link" href="/pages/services_list.php">Services</a>
